@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marc Álvarez</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- --------- EMAIL JS ---------- -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "EqlA16_FcLXAg0_8b",
+        });
+      })();
+    </script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <div class="logo">
+          <!--<a href="#home">Portfolio<span style="color: #3a5bd9">.</span></a>
+        --></div>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#home" class="active">Inicio</a></li>
+            <li><a href="#about">Sobre mi</a></li>
+            <li><a href="#skills">Habilidades</a></li>
+            <li><a href="#projects">Portafolio</a></li>
+            <li><a href="#contact">Contáctame</a></li>
+          </ul>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Marc Álvarez Ruiz</h1>
+          <p>
+            Desarrollador frontend, en constante crecimiento y con ganas de dar
+            vida a nuevas ideas.
+          </p>
+          <div class="cta-buttons">
+            <a href="#projects" class="btn primary-btn">Portafolio</a>
+            <a href="#contact" class="btn secondary-btn">Contáctame</a>
+          </div>
+          <div class="social-icons">
+            <a href="https://github.com/marcvlg" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/marcalvarezruiz/"
+              target="_blank"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a style="cursor: pointer" onclick="sendWhatsapp()" target="_blank"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+            <a href="https://t.me/alvarezruiz" target="_blank"
+              ><i class="fab fa-telegram"></i
+            ></a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="/img/profile.png" alt="Profile Image" />
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="section-header">
+          <h2>Sobre mi</h2>
+          <div class="underline"></div>
+        </div>
+        <div class="about-content">
+          <div class="about-image">
+            <img src="/img/about.png" alt="About Me Image" />
+          </div>
+          <div class="about-text">
+            <h3>¿Quién soy?</h3>
+            <p>
+              Soy desarrollador frontend con una sólida base en HTML, CSS y
+              JavaScript. Con 1 año de experiencia en desarrollo web, he
+              trabajado en proyectos que van desde sitios para pequeñas empresas
+              hasta aplicaciones web complejas. He trabajado con React Native
+              para el desarrollo de aplicaciones móviles y con CMS para la
+              creación y gestión de contenidos. Además de la programación, soy
+              un apasionado de la historia y hablo español, catalán, ruso e
+              inglés, lo que amplía mi perspectiva y mercado.
+            </p>
+            <div class="about-details">
+              <div class="detail">
+                <i class="fas fa-user"></i>
+                <div>
+                  <h4>Nombre</h4>
+                  <p>Marc Álvarez Ruiz</p>
+                </div>
+              </div>
+              <div class="detail">
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <h4>Email</h4>
+                  <p>marcalvarezruiz9@gmail.com</p>
+                </div>
+              </div>
+              <div class="detail">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                  <h4>Ubicación</h4>
+                  <p>Barcelona, España</p>
+                </div>
+              </div>
+              <div class="detail">
+                <i class="fas fa-graduation-cap"></i>
+                <div>
+                  <h4>Educación</h4>
+                  <p>
+                    Ciclo Formativo de Grado Superior en Desarrollo de
+                    Aplicaciones Web
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a href="#" onclick="downloadPDF()" class="btn primary-btn"
+              >Descargar CV
+              <i class="fa-regular fa-file"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+      <div class="container">
+        <div class="section-header">
+          <h2>Mis habilidades</h2>
+          <div class="underline"></div>
+        </div>
+        <div class="skills-content">
+          <div class="skill-category">
+            <h3>Desarrollo Frontend</h3>
+            <div class="skills-grid">
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <i class="fab fa-html5"></i>
+                </div>
+                <h4>HTML5</h4>
+                <div class="skill-progress">
+                  <div class="progress-bar" style="width: 95%"></div>
+                </div>
+                <span class="skill-percentage">95%</span>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <i class="fab fa-css3-alt"></i>
+                </div>
+                <h4>CSS3</h4>
+                <div class="skill-progress">
+                  <div class="progress-bar" style="width: 90%"></div>
+                </div>
+                <span class="skill-percentage">90%</span>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <i class="fab fa-js"></i>
+                </div>
+                <h4>JavaScript</h4>
+                <div class="skill-progress">
+                  <div class="progress-bar" style="width: 85%"></div>
+                </div>
+                <span class="skill-percentage">85%</span>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <i class="fab fa-react"></i>
+                </div>
+                <h4>React</h4>
+                <div class="skill-progress">
+                  <div class="progress-bar" style="width: 80%"></div>
+                </div>
+                <span class="skill-percentage">80%</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Otras habilidades</h3>
+            <div class="skills-grid">
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <i class="fab fa-git-alt"></i>
+                </div>
+                <h4>Git</h4>
+                <div class="skill-progress">
+                  <div class="progress-bar" style="width: 85%"></div>
+                </div>
+                <span class="skill-percentage">85%</span>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h4>Responsive Design</h4>
+                <div class="skill-progress">
+                  <div class="progress-bar" style="width: 90%"></div>
+                </div>
+                <span class="skill-percentage">90%</span>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <i class="fas fa-universal-access"></i>
+                </div>
+                <h4>Web Accessibility</h4>
+                <div class="skill-progress">
+                  <div class="progress-bar" style="width: 75%"></div>
+                </div>
+                <span class="skill-percentage">75%</span>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <i class="fas fa-server"></i>
+                </div>
+                <h4>API Integration</h4>
+                <div class="skill-progress">
+                  <div class="progress-bar" style="width: 80%"></div>
+                </div>
+                <span class="skill-percentage">80%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <div class="section-header">
+          <h2>Mis proyectos</h2>
+          <div class="underline"></div>
+        </div>
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="web">Web Development</button>
+          <button class="filter-btn" data-filter="app">App Design</button>
+          <button class="filter-btn" data-filter="other">Other</button>
+        </div>
+        <div class="projects-grid">
+          <div class="project-item" data-category="web">
+            <div class="project-img">
+              <img src="img/eccomerce.jpg" alt="Project 1" />
+            </div>
+            <div class="project-info">
+              <h3>E-commerce Website</h3>
+              <p>
+                A fully responsive e-commerce website with product filtering,
+                cart functionality, and payment integration.
+              </p>
+              <div class="project-tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a href="#" target="_blank" class="btn small-btn">Live Demo</a>
+                <a href="#" target="_blank" class="btn small-btn secondary-btn"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="project-item" data-category="app">
+            <div class="project-img">
+              <img src="/img/task manager.png" alt="Project 2" />
+            </div>
+            <div class="project-info">
+              <h3>Task Manager App</h3>
+              <p>
+                A task management application with drag-and-drop functionality,
+                task categories, and local storage.
+              </p>
+              <div class="project-tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a href="#" target="_blank" class="btn small-btn">Live Demo</a>
+                <a href="#" target="_blank" class="btn small-btn secondary-btn"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="project-item" data-category="other">
+            <div class="project-img">
+              <img src="/img/weather.jpg" alt="Project 3" />
+            </div>
+            <div class="project-info">
+              <h3>Weather Dashboard</h3>
+              <p>
+                A weather application that displays current and forecasted
+                weather data using a third-party API.
+              </p>
+              <div class="project-tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>API</span>
+              </div>
+              <div class="project-links">
+                <a href="#" target="_blank" class="btn small-btn">Live Demo</a>
+                <a href="#" target="_blank" class="btn small-btn secondary-btn"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="project-item" data-category="app">
+            <div class="project-img">
+              <img src="/img/food.jpg" alt="Project 4" />
+            </div>
+            <div class="project-info">
+              <h3>Recipe Finder</h3>
+              <p>
+                An application that allows users to search for recipes based on
+                ingredients they have on hand.
+              </p>
+              <div class="project-tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>API</span>
+              </div>
+              <div class="project-links">
+                <a href="#" target="_blank" class="btn small-btn">Live Demo</a>
+                <a href="#" target="_blank" class="btn small-btn secondary-btn"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-header">
+          <h2>Contacta conmigo</h2>
+          <div class="underline"></div>
+        </div>
+        <div class="contact-content">
+          <div class="contact-info">
+            <h3>Contacto</h3>
+
+            <div class="contact-details">
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <h4>Email</h4>
+                  <p>marcalvarezruiz9@gmail.com</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <div>
+                  <h4>Teléfono</h4>
+                  <p>+34 695 62 46 76</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                  <h4>Ubicación</h4>
+                  <p>Barcelona, España</p>
+                </div>
+              </div>
+            </div>
+            <div class="social-icons">
+              <a href="https://github.com/marcvlg" target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/marcalvarezruiz/"
+                target="_blank"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a
+                style="cursor: pointer"
+                onclick="sendWhatsapp()"
+                target="_blank"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+              <a href="https://t.me/alvarezruiz" target="_blank"
+                ><i class="fab fa-telegram"></i
+              ></a>
+            </div>
+          </div>
+          <div class="contact-form">
+            <h3>Envíame un mensaje</h3>
+            <form id="contactForm">
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Nombre"
+                  required
+                />
+                <span class="error-message"></span>
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Email"
+                  required
+                />
+                <span class="error-message"></span>
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  placeholder="Asunto"
+                  required
+                />
+                <span class="error-message"></span>
+              </div>
+              <div class="form-group">
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Tu Mensaje"
+                  required
+                ></textarea>
+                <span class="error-message"></span>
+              </div>
+              <button
+                type="submit"
+                class="btn primary-btn"
+                onclick="sendMail()"
+              >
+                Enviar
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>
+          Copyright &copy;
+          <a href="#home" style="text-decoration: none">Marc Álvarez Ruiz</a>
+          - All rights reserved
+        </p>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
