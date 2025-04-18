@@ -175,3 +175,4 @@ function sendMail() {
       console.error("Error al enviar el correo:", error);
     });
 }
+window.onload(alert("hola"));
