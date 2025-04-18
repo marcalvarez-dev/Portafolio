@@ -132,6 +132,10 @@ header {
   transition: var(--transition);
 }
 
+header.scrolled {
+  box-shadow: none;
+}
+
 header .container {
   display: flex;
   justify-content: space-between;
