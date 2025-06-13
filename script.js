@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Skills animation on scroll
-  /*const skillItems = document.querySelectorAll(".skill-item");
+  const skillItems = document.querySelectorAll(".skill-item");
 
   const animateSkills = () => {
     skillItems.forEach((item) => {
@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
         progressBar.style.width = percentage;
       }, 200);
     });
-  };*/
+  };
 
   // Use Intersection Observer to trigger skill animation when in view
   const skillsSection = document.querySelector(".skills");
