@@ -19,6 +19,16 @@
   </script>
 </head>
 
+<div id="videoModal" class="modal-video" style="display:none;">
+  <div class="modal-content-video">
+    <span class="close-btn-video" onclick="closeVideo()">&times;</span>
+    <video id="html5Video" controls autoplay style="max-width: 100%; height: auto;">
+      <source src="" type="video/mp4" />
+      Tu navegador no soporta la reproducción de video.
+    </video>
+  </div>
+</div>
+
 <body>
   <!-- Header -->
   <header>
@@ -241,11 +251,17 @@
               React.
             </p>
 
-            <div class="project-links">
+            <!--<div class="project-links">
               <a href="#" target="_blank" class="btn small-btn">Live Demo</a>
               <a href="https://github.com/marcvlg/todo-app" target="_blank"
                 class="btn small-btn secondary-btn">GitHub</a>
+            </div>-->
+            <div class="project-links">
+              <a href="#" class="btn small-btn" onclick="openVideoLocal('./video/todo-app.mp4')">Live Demo</a>
+              <a href="https://github.com/marcvlg/todo-app" target="_blank"
+                class="btn small-btn secondary-btn">GitHub</a>
             </div>
+
           </div>
         </div>
       </div>

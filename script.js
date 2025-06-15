@@ -175,3 +175,21 @@ function sendMail() {
       console.error("Error al enviar el correo:", error);
     });
 }
+
+function openVideoLocal(src) {
+  const modal = document.getElementById("videoModal");
+  const video = document.getElementById("html5Video");
+  video.src = src;
+  video.load();
+  video.play();
+  modal.style.display = "flex";
+}
+
+function closeVideo() {
+  const modal = document.getElementById("videoModal");
+  const video = document.getElementById("html5Video");
+  video.pause();
+  video.currentTime = 0;
+  video.src = "";
+  modal.style.display = "none";
+}
