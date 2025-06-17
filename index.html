@@ -38,18 +38,33 @@
       </div>
       <nav>
         <ul class="nav-links">
-          <li><a href="#home" class="active">Inicio</a></li>
-          <li><a href="#about">Sobre mi</a></li>
-          <li><a href="#skills">Habilidades</a></li>
-          <li><a href="#projects">Portafolio</a></li>
-          <li><a href="#contact">Contáctame</a></li>
+          <li><a href="#home" class="active" data-i18n="navHome">Inicio</a></li>
+          <li><a href="#about" data-i18n="navAbout">Sobre mí</a></li>
+          <li><a href="#skills" data-i18n="navSkills">Habilidades</a></li>
+          <li><a href="#projects" data-i18n="navProjects">Portafolio</a></li>
+          <li><a href="#contact" data-i18n="navContact">Contáctame</a></li>
         </ul>
         <div class="hamburger">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
         </div>
+
       </nav>
+
+      <div class="language-selector">
+        <button class="lang-btn">
+          <img src="img/flags/es.png" alt="Español" class="lang-icon">
+        </button>
+        <ul class="lang-dropdown">
+          <li data-lang="es">
+            <img src="img/flags/es.png" alt="Español" class="lang-icon">
+          </li>
+          <li data-lang="ru">
+            <img src="img/flags/ru.png" alt="Русский" class="lang-icon">
+          </li>
+        </ul>
+      </div>
     </div>
   </header>
 
@@ -57,14 +72,14 @@
   <section id="home" class="hero">
     <div class="container" data-aos="fade-up" data-aos-duration="1500">
       <div class="hero-content">
-        <h1>Marc Álvarez Ruiz</h1>
-        <p>
+        <h1 data-i18n="name">Marc Álvarez Ruiz</h1>
+        <p data-i18n="heroText">
           Desarrollador frontend, en constante crecimiento y con ganas de dar
           vida a nuevas ideas.
         </p>
         <div class="cta-buttons">
-          <a href="#projects" class="btn primary-btn">Portafolio</a>
-          <a href="#contact" class="btn secondary-btn">Contáctame</a>
+          <a href="#projects" class="btn primary-btn" data-i18n="portfolioBtn">Portafolio</a>
+          <a href="#contact" class="btn secondary-btn" data-i18n="contactBtn">Contáctame</a>
         </div>
         <div class="social-icons">
           <a href="https://github.com/marcvlg" target="_blank"><i class="fab fa-github"></i></a>
@@ -83,7 +98,7 @@
   <section id="about" class="about">
     <div class="container" data-aos="fade-up">
       <div class="section-header">
-        <h2>Sobre mi</h2>
+        <h2 data-i18n="aboutTitle">Sobre mi</h2>
         <div class="underline"></div>
       </div>
       <div class="about-content">
@@ -91,8 +106,8 @@
           <img src="./img/about.png" alt="About Me Image" />
         </div>
         <div class="about-text">
-          <h3>¿Quién soy?</h3>
-          <p>
+          <h3 data-i18n="whoTitle">¿Quién soy?</h3>
+          <p data-i18n="aboutDescription">
             Soy desarrollador frontend con una sólida base en HTML, CSS y
             JavaScript. Con 1 año de experiencia en desarrollo web, he
             trabajado en proyectos que van desde sitios para pequeñas empresas
@@ -106,37 +121,36 @@
             <div class="detail">
               <i class="fas fa-user"></i>
               <div>
-                <h4>Nombre</h4>
-                <p>Marc Álvarez Ruiz</p>
+                <h4 data-i18n="nameLabel">Nombre</h4>
+                <p data-i18n="nameValue">Marc Álvarez Ruiz</p>
               </div>
             </div>
             <div class="detail">
               <i class="fas fa-envelope"></i>
               <div>
-                <h4>Email</h4>
+                <h4 data-i18n="emailLabel">Email</h4>
                 <p>marcalvarezruiz9@gmail.com</p>
               </div>
             </div>
             <div class="detail">
               <i class="fas fa-map-marker-alt"></i>
               <div>
-                <h4>Ubicación</h4>
-                <p>Barcelona, España</p>
+                <h4 data-i18n="locationLabel">Ubicación</h4>
+                <p data-i18n="locationValue">Barcelona, España</p>
               </div>
             </div>
             <div class="detail">
               <i class="fas fa-graduation-cap"></i>
               <div>
-                <h4>Educación</h4>
-                <p>
-                  Ciclo Formativo de Grado Superior en Desarrollo de
-                  Aplicaciones Web
+                <h4 data-i18n="educationLabel">Educación</h4>
+                <p data-i18n="educationValue">
+                  Ciclo Formativo de Grado Superior en Desarrollo de Aplicaciones Web
                 </p>
               </div>
             </div>
           </div>
-          <a href="#" onclick="downloadPDF()" class="btn primary-btn">Descargar CV
-            <i class="fa-regular fa-file"></i>
+          <a href="#" onclick="downloadPDF()" class="btn primary-btn" data-i18n="downloadCV">
+            Descargar CV <i class="fa-regular fa-file"></i>
           </a>
         </div>
       </div>
@@ -147,12 +161,12 @@
   <section id="skills" class="skills">
     <div class="container" data-aos="fade-up">
       <div class="section-header">
-        <h2>Mis habilidades</h2>
+        <h2 data-i18n="skillsTitle">Mis habilidades</h2>
         <div class="underline"></div>
       </div>
       <div class="skills-content">
         <div class="skill-category">
-          <h3>Desarrollo Frontend</h3>
+          <h3 data-i18n="frontendSkills">Desarrollo Frontend</h3>
           <div class="skills-grid">
             <div class="skill-item">
               <div class="skill-icon">
@@ -197,7 +211,7 @@
           </div>
         </div>
         <div class="skill-category">
-          <h3>Otras habilidades</h3>
+          <h3 data-i18n="otherSkills">Otras habilidades</h3>
           <div class="skills-grid">
             <div class="skill-item">
               <div class="skill-icon">
@@ -230,7 +244,7 @@
   <section id="projects" class="projects">
     <div class="container" data-aos="fade-up">
       <div class="section-header">
-        <h2>Mis proyectos</h2>
+        <h2 data-i18n="projectsTitle">Mis proyectos</h2>
         <div class="underline"></div>
       </div>
       <div class="project-filters">
@@ -246,12 +260,13 @@
           </div>
           <div class="project-info">
             <h3>To-do app</h3>
-            <p>
-              Aplicación web para gestionar tareas, con funciones para añadir, eliminar y mover tareas. Desarrollada con
-              React.
+            <p data-i18n="todoDescription">
+              Aplicación web desarrollada con React para gestionar tareas, con funcionalidades para añadir, eliminar y
+              reorganizar elementos fácilmente.
             </p>
             <div class="project-links">
-              <a href="#" class="btn small-btn" onclick="openVideoLocal('./video/todo-app.mp4')">Ver</a>
+              <a data-i18n="projectButton" href="#" class="btn small-btn"
+                onclick="openVideoLocal('./video/todo-app.mp4')">Ver</a>
               <!--<a href="https://github.com/marcvlg/todo-app" target="_blank"
                 class="btn small-btn secondary-btn">GitHub</a>-->
             </div>
@@ -264,12 +279,13 @@
           </div>
           <div class="project-info">
             <h3>Weather app</h3>
-            <p>
-              Web para consultar el clima actual y el pronóstico a 5 días de cualquier ciudad. Desarrollada con
-              React.
+            <p data-i18n="weatherDescription">
+              Aplicación web desarrollada con React para consultar el clima actual y el pronóstico a 5 días de cualquier
+              ciudad del mundo.
             </p>
             <div class="project-links">
-              <a href="#" class="btn small-btn" onclick="openVideoLocal('./video/weather-app.mp4')">Ver</a>
+              <a data-i18n="projectButton" href="#" class="btn small-btn"
+                onclick="openVideoLocal('./video/weather-app.mp4')">Ver</a>
 
             </div>
 
@@ -284,33 +300,33 @@
   <section id="contact" class="contact">
     <div class="container">
       <div class="section-header" data-aos="fade-up">
-        <h2>Contacta conmigo</h2>
+        <h2 data-i18n="contactTitle">Contacta conmigo</h2>
         <div class="underline"></div>
       </div>
       <div class="contact-content">
         <div class="contact-info" data-aos="fade-right">
-          <h3>Contacto</h3>
+          <h3 data-i18n="contactHeader">Contacto</h3>
 
           <div class="contact-details">
             <div class="contact-item">
               <i class="fas fa-envelope"></i>
               <div>
-                <h4>Email</h4>
+                <h4 data-i18n="emailLabel">Email</h4>
                 <p>marcalvarezruiz9@gmail.com</p>
               </div>
             </div>
             <div class="contact-item">
               <i class="fas fa-phone"></i>
               <div>
-                <h4>Teléfono</h4>
+                <h4 data-i18n="phoneLabel">Teléfono</h4>
                 <p>+34 695 62 46 76</p>
               </div>
             </div>
             <div class="contact-item">
               <i class="fas fa-map-marker-alt"></i>
               <div>
-                <h4>Ubicación</h4>
-                <p>Barcelona, España</p>
+                <h4 data-i18n="locationLabel">Ubicación</h4>
+                <p data-i18n="locationValue">Barcelona, España</p>
               </div>
             </div>
           </div>
@@ -322,27 +338,30 @@
           </div>
         </div>
         <div class="contact-form" data-aos="fade-left">
-          <h3>Envíame un mensaje</h3>
+          <h3 data-i18n="sendMsg">Envíame un mensaje</h3>
           <form id="contactForm">
             <div class="form-group">
-              <input type="text" id="name" name="name" placeholder="Nombre" required />
+              <input data-i18n-placeholder="nameInput" type="text" id="name" name="name" placeholder="Nombre"
+                required />
               <span class="error-message"></span>
             </div>
             <div class="form-group">
-              <input type="email" id="email" name="email" placeholder="Email" required />
+              <input data-i18n-placeholder="emailInput" type="email" id="email" name="email" placeholder="Email"
+                required />
               <span class="error-message"></span>
             </div>
             <div class="form-group">
-              <input type="text" id="subject" name="subject" placeholder="Asunto" required />
+              <input data-i18n-placeholder="subjectInput" type="text" id="subject" name="subject" placeholder="Asunto"
+                required />
               <span class="error-message"></span>
             </div>
             <div class="form-group">
-              <textarea id="message" name="message" placeholder="Tu Mensaje" required></textarea>
+              <textarea data-i18n-placeholder="messageInput" id="message" name="message" placeholder="Tu Mensaje"
+                required></textarea>
               <span class="error-message"></span>
             </div>
-            <button type="submit" class="btn primary-btn" onclick="sendMail()">
-              Enviar
-              <i class="fa-solid fa-paper-plane"></i>
+            <button type="submit" class="btn primary-btn" data-i18n="sendBtn">
+              Enviar <i class="fa-solid fa-paper-plane"></i>
             </button>
           </form>
         </div>

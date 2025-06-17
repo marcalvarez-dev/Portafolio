@@ -193,3 +193,120 @@ function closeVideo() {
   video.src = "";
   modal.style.display = "none";
 }
+
+const translations = {
+  es: {
+    name: "Marc Álvarez Ruiz",
+    heroText: "Desarrollador frontend, en constante crecimiento y con ganas de dar vida a nuevas ideas.",
+    portfolioBtn: "Portafolio",
+    contactBtn: "Contáctame",
+    aboutTitle: "Sobre mi",
+    whoTitle: "¿Quién soy?",
+    aboutDescription: "Soy desarrollador frontend con una sólida base en HTML, CSS y JavaScript. Con 1 año de experiencia en desarrollo web, he trabajado en proyectos que van desde sitios para pequeñas empresas hasta aplicaciones web complejas. He trabajado con React Native para el desarrollo de aplicaciones móviles y con CMS para la creación y gestión de contenidos. Además de la programación, soy un apasionado de la historia y hablo español, catalán, ruso e inglés, lo que amplía mi perspectiva y mercado.",
+    nameLabel: "Nombre",
+    nameValue: "Marc Álvarez Ruiz",
+    emailLabel: "Email",
+    locationLabel: "Ubicación",
+    locationValue: "Barcelona, España",
+    educationLabel: "Educación",
+    educationValue: "Ciclo Formativo de Grado Superior en Desarrollo de Aplicaciones Web",
+    downloadCV: 'Descargar CV <i class="fa-regular fa-file"></i>',
+    skillsTitle: "Mis habilidades",
+    frontendSkills: "Desarrollo Frontend",
+    otherSkills: "Otras habilidades",
+    responsiveDesign: "Responsive Design",
+    projectsTitle: "Mis proyectos",
+    todoTitle: "To-do app",
+    todoDescription: "Aplicación web desarrollada con React para gestionar tareas, con funcionalidades para añadir, eliminar y reorganizar elementos fácilmente.",
+    weatherTitle: "Weather app",
+    weatherDescription: "Aplicación web desarrollada con React para consultar el clima actual y el pronóstico a 5 días de cualquier ciudad del mundo.",
+    contactTitle: "Contacta conmigo",
+    contactHeader: "Contacto",
+    phoneLabel: "Teléfono",
+    sendMsg: "Envíame un mensaje",
+    sendBtn: 'Enviar <i class="fa-solid fa-paper-plane"></i>',
+    nameInput: "Nombre",
+    emailInput: "Email",
+    subjectInput: "Asunto",
+    messageInput: "Tu Mensaje",
+    navHome: "Inicio",
+    navAbout: "Sobre mí",
+    navSkills: "Habilidades",
+    navProjects: "Portafolio",
+    navContact: "Contáctame",
+    projectButton: "Ver",
+  },
+  ru: {
+    name: "Марк Альварес Руис",
+    heroText: "Frontend-разработчик, постоянно развиваюсь и стремлюсь воплощать идеи в жизнь.",
+    portfolioBtn: "Портфолио",
+    contactBtn: "Связаться",
+    aboutTitle: "Обо мне",
+    whoTitle: "Кто я?",
+    aboutDescription: "Я — frontend-разработчик с прочной базой в HTML, CSS и JavaScript. Имея год опыта в веб-разработке, я участвовал в проектах — от сайтов для малого бизнеса до сложных веб-приложений. Я работал с React Native для создания мобильных приложений, а также с CMS для управления контентом. Помимо программирования, я увлекаюсь историей и говорю на испанском, каталанском, русском и английском языках, что расширяет мою перспективу и рынок.",
+    nameLabel: "Имя",
+    nameValue: "Марк Альварес Руис",
+    emailLabel: "Электронная почта",
+    locationLabel: "Местоположение",
+    locationValue: "Барселона, Испания",
+    educationLabel: "Образование",
+    educationValue: "Высшее профессиональное образование по веб-разработке",
+    downloadCV: 'Скачать резюме <i class="fa-regular fa-file"></i>',
+    skillsTitle: "Мои навыки",
+    frontendSkills: "Frontend разработка",
+    otherSkills: "Другие навыки",
+    responsiveDesign: "Адаптивный дизайн",
+    projectsTitle: "Мои проекты",
+    todoTitle: "To-do приложение",
+    todoDescription: "Веб-приложение, разработанное на React для управления задачами с возможностью их добавления, удаления и удобной перестановки.",
+    weatherTitle: "Приложение погоды",
+    weatherDescription: "Веб-приложение, разработанное с помощью React, для проверки текущей погоды и пятидневного прогноза для любого города мира.",
+    contactTitle: "Свяжитесь со мной",
+    contactHeader: "Контакты",
+    phoneLabel: "Телефон",
+    sendMsg: "Отправьте сообщение",
+    sendBtn: 'Отправить <i class="fa-solid fa-paper-plane"></i>',
+    nameInput: "Имя",
+    emailInput: "Email",
+    subjectInput: "Тема",
+    messageInput: "Ваше сообщение",
+    navHome: "Главная",
+    navAbout: "Обо мне",
+    navSkills: "Навыки",
+    navProjects: "Портфолио",
+    navContact: "Связаться",
+    projectButton: "Смотреть",
+  },
+};
+
+let currentLang = "es";
+
+function updateLanguage() {
+  const langBtn = document.querySelector(".lang-btn img");
+  langBtn.src = currentLang === "es" ? "img/flags/es.png" : "img/flags/ru.png";
+  langBtn.alt = currentLang === "es" ? "Español" : "Русский";
+
+  // Traducir textos
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if (key === "downloadCV" || key === "sendBtn") {
+      el.innerHTML = translations[currentLang][key];
+    } else {
+      el.textContent = translations[currentLang][key];
+    }
+  });
+
+  // Traducir placeholders
+  document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+    const key = el.getAttribute("data-i18n-placeholder");
+    el.setAttribute("placeholder", translations[currentLang][key]);
+  });
+};
+
+// Escuchar clics en las opciones del menú
+document.querySelectorAll(".lang-dropdown li").forEach(item => {
+  item.addEventListener("click", () => {
+    currentLang = item.getAttribute("data-lang");
+    updateLanguage();
+  });
+});
