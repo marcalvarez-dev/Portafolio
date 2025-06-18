@@ -28,8 +28,6 @@ html {
 }
 
 body {
-  /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  */
   line-height: 1.6;
   color: var(--text-color);
   background-color: var(--body-color);
@@ -39,6 +37,7 @@ body {
 a {
   text-decoration: none;
   color: var(--dark-color);
+
 }
 
 ul {
@@ -133,11 +132,26 @@ header {
   transition: var(--transition);
 }
 
-header .container {
+.header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 15px 5px
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  /* espacio entre nav y bandera */
+}
+
+header.no-shadow {
+  box-shadow: none;
+}
+
+.logo {
+  flex: 0 0 auto;
 }
 
 .logo a {
@@ -146,17 +160,26 @@ header .container {
   color: var(--dark-color);
 }
 
+
+.main-nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
 .nav-links {
   display: flex;
 }
 
-.nav-links li {
-  margin-left: 30px;
+.nav-links {
+  display: flex;
+  gap: 30px;
 }
 
 .nav-links a {
   font-weight: 600;
   transition: var(--transition);
+  font-size: 0.9rem;
 }
 
 .nav-links a:hover,
@@ -756,8 +779,7 @@ footer {
 
 .language-selector {
   position: relative;
-  display: inline-block;
-  margin-left: 20px;
+  flex-shrink: 0;
 }
 
 .lang-btn {
@@ -827,4 +849,9 @@ footer {
 
 .lang-dropdown li:hover {
   background-color: #f0f0f0;
+}
+
+footer p {
+  font-size: 0.9rem;
+  /* o usa px si lo prefieres */
 }

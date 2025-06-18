@@ -32,38 +32,32 @@
 <body>
   <!-- Header -->
   <header>
-    <div class="container">
+    <div class="container header-container">
       <div class="logo">
-
+        <a href="#home">Marc</a>
       </div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#home" class="active" data-i18n="navHome">Inicio</a></li>
-          <li><a href="#about" data-i18n="navAbout">Sobre mí</a></li>
-          <li><a href="#skills" data-i18n="navSkills">Habilidades</a></li>
-          <li><a href="#projects" data-i18n="navProjects">Portafolio</a></li>
-          <li><a href="#contact" data-i18n="navContact">Contáctame</a></li>
-        </ul>
-        <div class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+
+      <!-- Agrupamos el nav y el selector en un contenedor -->
+      <div class="header-right">
+        <nav class="main-nav">
+          <ul class="nav-links">
+            <li><a href="#home" data-i18n="navHome">Inicio</a></li>
+            <li><a href="#about" data-i18n="navAbout">Sobre mí</a></li>
+            <li><a href="#skills" data-i18n="navSkills">Habilidades</a></li>
+            <li><a href="#projects" data-i18n="navProjects">Portafolio</a></li>
+            <li><a href="#contact" data-i18n="navContact">Contáctame</a></li>
+          </ul>
+        </nav>
+
+        <div class="language-selector">
+          <button class="lang-btn">
+            <img src="img/flags/es.png" alt="Español" class="lang-icon" />
+          </button>
+          <ul class="lang-dropdown">
+            <li data-lang="es"><img src="img/flags/es.png" alt="Español" class="lang-icon" /></li>
+            <li data-lang="ru"><img src="img/flags/ru.png" alt="Русский" class="lang-icon" /></li>
+          </ul>
         </div>
-
-      </nav>
-
-      <div class="language-selector">
-        <button class="lang-btn">
-          <img src="img/flags/es.png" alt="Español" class="lang-icon">
-        </button>
-        <ul class="lang-dropdown">
-          <li data-lang="es">
-            <img src="img/flags/es.png" alt="Español" class="lang-icon">
-          </li>
-          <li data-lang="ru">
-            <img src="img/flags/ru.png" alt="Русский" class="lang-icon">
-          </li>
-        </ul>
       </div>
     </div>
   </header>

@@ -136,7 +136,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     observer.observe(skillsSection);
   }
+
+
 });
+
+
 
 /* ----- SEND WHATSAPP ----- */
 function sendWhatsapp() {
@@ -309,4 +313,13 @@ document.querySelectorAll(".lang-dropdown li").forEach(item => {
     currentLang = item.getAttribute("data-lang");
     updateLanguage();
   });
+});
+
+window.addEventListener("scroll", () => {
+  const header = document.querySelector("header");
+  if (window.scrollY === 0) {
+    header.classList.add("no-shadow");
+  } else {
+    header.classList.remove("no-shadow");
+  }
 });
