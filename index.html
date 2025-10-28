@@ -17,6 +17,9 @@
       });
     })();
   </script>
+  <div class="hamburger">
+    <i class="fas fa-bars"></i>
+  </div>
 </head>
 
 <div id="videoModal" class="modal-video" style="display:none;">
@@ -332,7 +335,7 @@
         </div>
         <div class="contact-form" data-aos="fade-left">
           <h3 data-i18n="sendMsg">Envíame un mensaje</h3>
-          <form id="contactForm">
+          <form id="contactForm" onsubmit="sendMail()">
             <div class="form-group">
               <input data-i18n-placeholder="nameInput" type="text" id="name" name="name" placeholder="Nombre"
                 required />
