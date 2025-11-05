@@ -274,7 +274,8 @@ header.no-shadow {
 
 .hero-image img {
   max-width: 80%;
-  border-radius: 20px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 /* About Section */
